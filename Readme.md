@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Анна Сигаренко](https://up.htmlacademy.ru/htmlcss/36/user/2091431).
-* Наставник: `Неизвестно`.
+* Наставник: [Ирина Малиновская](https://htmlacademy.ru/profile/irina-malinovskaya).
 
 ---
 

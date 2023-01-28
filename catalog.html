@@ -11,7 +11,7 @@
       <!-- Шапка сайта -->
       <header class="page-header">
         <!-- Логотип -->
-        <a class="page-logo">
+        <a class="page-logo" href="index.html">
           <img class src="#" alt="Логотип">
         </a>
         <!-- //  Логотип -->
@@ -144,17 +144,23 @@
             <option value="expensive">Сначала дорогие</option>
           </select>
 
-          <div>
-            <a class="button button-light">
-              <span class="visually-hidden">Показать список</span>
-            </a>
-            <a class="button" href="#">
-              <span class="visually-hidden">Показать карточки</span>
-            </a>
+          <ul class="view-list">
+            <li class="view-item">
+              <a class="button button-actives">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </li>
+            <li class="view-item">
+              <a class="button" href="#">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+            </li>
+            <li class="view-item"></li>
             <a class="button" href="#">
               <span class="visually-hidden">Показать содержимое</span>
             </a>
-          </div>
+            </li>
+          </ul>
 
           <ul class="hotel-list">
             <li class="hotel-card">
@@ -176,9 +182,7 @@
                 <p>Рейтинг: 8,5</p>
               </div>
             </li>
-          </ul>
 
-          <ul class="hotel-list">
             <li class="hotel-card">
               <a class="hotel-card-link" href="hotel.html">
                 <img class="hotel-card-image" src="#" alt="Радуга">
@@ -198,9 +202,7 @@
                 <p>Рейтинг: 9,2</p>
               </div>
             </li>
-          </ul>
 
-          <ul class="hotel-list">
             <li class="hotel-card">
               <a class="hotel-card-link" href="hotel.html">
                 <img class="hotel-card-image" src="#" alt="Горы">
@@ -219,9 +221,7 @@
                 <p>Рейтинг: 6,9</p>
               </div>
             </li>
-          </ul>
 
-          <ul class="hotel-list">
             <li class="hotel-card">
               <a class="hotel-card-link" href="hotel.html">
                 <img class="hotel-card-image" src="#" alt="Ночное небо">
@@ -255,7 +255,7 @@
                 <a class="pagination-link" href="#">4</a>
               </li>
               <li class="pagination-item">
-                  <span>...</span>
+                <span>...</span>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">10</a>

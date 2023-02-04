@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+/* Basic */
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.button {
+  color: #ffffff;
+}
+
+.button--basic {
+  background-color: #756157;
+}
+
+.button--additional {
+  background-color: #82b3d3;
+
+}
+
+.button--selected {
+  background-color: #7db54f;
+
+}
+
+.link {}
+
+.visually-hidden {}
+
+
+/* Header */
+.favorites-item {
+  width: 20px;
+  height: 20px;
+
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+
+  border-radius: 10px;
+  background-color: #7db54f;
+
+}
+
+/*main*/
+.main-index {
+  background-image: url("../images/index-mountains.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* Advantages */
+.advantage-item--accent {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+/*Прдложения*/
+.offers-item--accent  {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/*Footer*/
+.subscribe-section  {
+  color: #ffffff;
+}

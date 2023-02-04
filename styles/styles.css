@@ -16,6 +16,10 @@
 
 
 /* Basic */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 22px;
@@ -44,17 +48,22 @@ h3 {
 
 .button--additional {
   background-color: #82b3d3;
-
 }
 
 .button--selected {
   background-color: #7db54f;
-
 }
 
 .link {}
 
 .visually-hidden {}
+
+
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
 
 
 /* Header */
@@ -68,14 +77,15 @@ h3 {
 
   border-radius: 10px;
   background-color: #7db54f;
-
 }
 
-/*main*/
-.main-index {
+/* Main */
+.welcome-section {
+  min-height: 485px;
+
   background-image: url("../images/index-mountains.jpg");
-  background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: 50%;
 }
 
 /* Advantages */
@@ -84,12 +94,22 @@ h3 {
   background-color: #82b3d3;
 }
 
-/*Прдложения*/
-.offers-item--accent  {
+.advantage-item--background {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Предложения */
+.offers-item--accent {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
 /*Footer*/
-.subscribe-section  {
+.subscribe-section {
+  min-height: 414px;
+
   color: #ffffff;
+
+  background-image: url("../images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
 }

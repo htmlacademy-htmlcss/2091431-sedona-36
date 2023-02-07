@@ -1,0 +1,206 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+/* Basic */
+body {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.h2 {
+  font-size: 30px;
+  line-height: 36px;
+
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-size: 24px;
+  line-height: 28px;
+
+  text-transform: uppercase;
+}
+
+.button {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button--big {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.button--basic {
+  background-color: #756157;
+}
+
+.button--additional {
+  background-color: #82b3d3;
+}
+
+.button--selected {
+  background-color: #7db54f;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+/* Header */
+.navigation-link {
+  text-decoration: none;
+}
+
+.favorites-item {
+  width: 20px;
+  height: 20px;
+
+  font-size: 10px;
+  line-height: 10px;
+  color: #ffffff;
+
+  border-radius: 10px;
+  background-color: #7db54f;
+}
+
+.menu-link {
+  text-decoration: none;
+}
+
+/* Main */
+.welcome-section {
+  min-height: 485px;
+
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url("../images/index-mountains.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+/* Advantages */
+.advantage-item--accent {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.advantage-item--background {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/* Предложения */
+.offers-item--accent {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+/*Footer*/
+.subscribe-section {
+  min-height: 414px;
+
+  color: #ffffff;
+
+  background-image: url("../images/subscribe.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.phone {
+  text-decoration: none;
+}
+
+/* Pages */
+/* Catalog */
+.inner-header {
+  min-height: 412px;
+
+  color: #ffffff;
+  background-color: #000000;
+  background-image: url("../images/catalog/filter.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.h1 {
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.hotel-card-title {
+  color: #000000;
+}
+
+.hotel-card-link {
+  text-decoration: none;
+}
+
+.result {
+  font-weight: 700;
+
+  font-size: 30px;
+  line-height: 36px;
+
+  text-transform: uppercase;
+}
+
+.rating-area {
+  color: #82b3d3;
+}
+
+.stars {
+  background-color: #F2F2F2;
+}
+
+.pagination-link {
+  line-height: 36px;
+  font-weight: 700;
+
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-decoration: none;
+}
+
+.pagination-current {
+  color: #000000;
+  background: #F2F2F2;
+}

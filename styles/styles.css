@@ -30,6 +30,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #000000;
+2
   background-color: #f2f2f2;
 }
 
@@ -72,6 +73,7 @@ body {
   display: inline-block;
   padding: 8px 34px;
 
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
@@ -79,6 +81,9 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+
+  border-radius: 4px;
+  border: none;
 }
 
 .button--big {
@@ -153,6 +158,7 @@ body {
 .navigation-link {
   display: block;
   padding: 20px 0;
+
   text-decoration: none;
 }
 
@@ -212,7 +218,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
 /* Advantages */
 .advantages {
   text-align: center;
@@ -222,6 +227,7 @@ body {
   max-width: 651px;
   margin: 0 auto 21px;
   padding: 69px;
+
   text-align: center;
 }
 
@@ -302,8 +308,6 @@ body {
   margin: 0;
 }
 
-
-
 /* Предложения */
 .offers-section {
   text-align: center;
@@ -332,11 +336,9 @@ body {
 
   font-size: 18px;
   line-height: 21px;
-
   text-align: center;
+
   box-sizing: border-box;
-
-
 }
 
 .offers-item .h3 {
@@ -357,6 +359,7 @@ body {
 .search-wraper {
   max-width: 592px;
   margin: 0 auto;
+
   text-align: center;
 }
 
@@ -369,11 +372,11 @@ body {
   min-height: 414px;
   padding: 96px 258px 104px;
 
+  text-align: center;
   color: #000000;
 
   background-repeat: no-repeat;
 
-  text-align: center;
   box-sizing: border-box;
 }
 
@@ -504,12 +507,13 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 50px 70px 60px;
+  padding: 50px 70px 0;
 }
 
 .infrastructure {
   margin: 0;
   padding: 0;
+
   border: none;
 }
 
@@ -523,6 +527,7 @@ body {
 .type-housing {
   margin: 0;
   padding: 0 140px 0 70px;
+
   border: none;
 }
 
@@ -536,6 +541,7 @@ body {
 .price {
   margin: 0;
   padding: 0 70px 0 0;
+
   border: none;
 }
 
@@ -543,6 +549,26 @@ body {
   align-self: flex-end;
 }
 
+.result {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+
+  text-transform: uppercase;
+}
+
+.select-control {
+  width: 292px;
+  height: 49px;
+  padding: 10px 20px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
 
 .view-list {
   display: flex;
@@ -581,8 +607,10 @@ body {
 }
 
 .hotel-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  grid-template-rows: auto;
+  grid-gap: 16px 18px;
   max-width: 340px;
   padding: 20px;
 
@@ -593,28 +621,58 @@ body {
 }
 
 .hotel-card-title {
+  margin-top: 16px;
+
   color: #000000;
+
+  text-transform: none;
 }
 
 .hotel-card-link {
+  grid-column: 1/3;
+
   text-decoration: none;
 }
 
-.result {
-  font-weight: 700;
-
-  font-size: 30px;
-  line-height: 36px;
-
-  text-transform: uppercase;
+.hotel-card-type,
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
 }
 
-.rating-area {
+.hotel-card-price {
+  text-align: right;
+}
+
+.hotel-card-more {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.hotel-card-favorite {
+  padding-left: 18px;
+  padding-right: 18px;
+
+  text-align: center;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+
   color: #82b3d3;
 }
 
-.stars {
+.rating-result {
+  padding: 9px 22px 8px 23px;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
   background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 
@@ -625,11 +683,13 @@ body {
 
 .pagination-list {
   display: flex;
-  padding-left: 0;
-  margin-top: 40px;
+  margin-top: 0;
   margin-bottom: 60px;
+  padding-top: 40px;
+  padding-left: 0;
 
   list-style-type: none;
+  border-top: 1px solid #e6e6e6;
 }
 
 .pagination-item {
@@ -638,20 +698,34 @@ body {
 
 .pagination-link {
   display: block;
-  box-sizing: border-box;
   width: 60px;
   height: 60px;
-  padding: 11px 24px 12px 23px;
+  padding: 12px;
+
   line-height: 36px;
   font-weight: 700;
-
   color: #ffffff;
-  background-color: #82B3D3;
+  text-align: center;
   text-decoration: none;
+
+  background-color: #82b3d3;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.pagination-more {
+  display: block;
+  width: 60px;
+  height: 60px;
+  padding: 12px;
+
+  line-height: 26px;
+  text-align: center;
+
+  box-sizing: border-box;
 }
 
 .pagination-current {
   color: #000000;
-  background: #F2F2F2;
+  background: #f2f2f2;
 }

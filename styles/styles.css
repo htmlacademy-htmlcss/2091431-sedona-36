@@ -30,7 +30,7 @@ body {
   line-height: 26px;
   font-weight: 400;
   color: #000000;
-2
+
   background-color: #f2f2f2;
 }
 
@@ -84,6 +84,7 @@ body {
 
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 
 .button--big {
@@ -98,12 +99,59 @@ body {
   background-color: #756157;
 }
 
+.button--basic:hover,
+.button--basic:focus {
+  background-color: #615048;
+}
+
+.button--basic:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button--basic:disabled {
+  color: #ffffff;
+
+  background-color: #e5e5e5;
+
+  cursor: default;
+}
+
 .button--additional {
   background-color: #82b3d3;
 }
 
+.button--additional:hover,
+.button--additional:focus {
+  background-color: #68a2ca;
+}
+
+.button--additional:active {
+  background-color: #82b3d3;
+}
+
+.button--additional:disabled {
+  background-color: #e5e5e5;
+
+  cursor: default;
+}
+
 .button--selected {
   background-color: #7db54f;
+}
+
+.button--selected:hover,
+.button--selected:focus {
+  background-color: #6c9e42;
+}
+
+.button--selected:active {
+  background-color: #7db54f;
+}
+
+.button--selected:disabled {
+  background-color: #e5e5e5;
+
+  cursor: default;
 }
 
 .visually-hidden {
@@ -140,6 +188,20 @@ body {
   min-height: 64px;
   padding-left: 70px;
   padding-right: 70px;
+  column-gap: 30px;
+}
+
+.page-logo {
+  position: relative;
+
+  width: 140px;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
 }
 
 .navigation-list {
@@ -159,10 +221,25 @@ body {
   display: block;
   padding: 20px 0;
 
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+
   text-decoration: none;
 }
 
 .navigation-link--active {
+  position: relative;
+}
+
+.navigation-link--active::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+
   border-bottom: 2px solid #756257;
 }
 
@@ -176,7 +253,42 @@ body {
   list-style-type: none;
 }
 
+.menu-item {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 22px 12px;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+}
+
+.menu-link--button {
+  height: auto;
+  margin-left: 20px;
+  padding: 8px 34px;
+}
+
+.favorites {
+  position: relative;
+}
+
 .favorites-item {
+  position: absolute;
+  top: 11px;
+  right: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20px;
   height: 20px;
 
@@ -188,16 +300,6 @@ body {
   background-color: #7db54f;
 }
 
-.menu-link {
-  display: block;
-  padding: 22px 12px;
-  text-decoration: none;
-}
-
-.menu-link--button {
-  padding: 8px 34px;
-  margin-left: 20px;
-}
 
 /* Main */
 .main-index {
@@ -205,6 +307,8 @@ body {
 }
 
 .welcome-section {
+  position: relative;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -216,6 +320,19 @@ body {
   background-image: url("../images/index-mountains.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.welcome-section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 600px solid #fff;
+  border-right: 600px solid #fff;
+  border-top: 57px solid transparent;
 }
 
 /* Advantages */
@@ -422,6 +539,7 @@ body {
 .contacts {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   column-gap: 40px;
   padding: 40px 70px 30px;
 
@@ -443,7 +561,22 @@ body {
   height: 40px;
   padding: 0 10px;
 
+  color: #83b3d3;
+
   box-sizing: border-box;
+}
+
+.social-link:hover,
+.social-link:focus  {
+  color: #68a2ca;
+}
+
+.social-link:active  {
+  background: rgba(104, 162, 202, 0.3);
+}
+
+.social-icon {
+  fill: currentColor;
 }
 
 .phone {
@@ -456,6 +589,25 @@ body {
   text-decoration: none;
   text-align: center;
 }
+
+.phone:hover,
+.phone:focus  {
+  color: #756157;
+}
+
+.phone:active  {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.developer:hover,
+.developer:focus  {
+  background: #756157;
+}
+
+.developer:active  {
+  background: rgba(117, 97, 87, 0.3);
+}
+
 
 /* Pages */
 /* Catalog */
@@ -568,6 +720,19 @@ body {
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:active {
+  border: 2px solid #3f5e72;
+}
+
+.select-control:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .view-list {

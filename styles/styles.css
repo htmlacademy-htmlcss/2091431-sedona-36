@@ -193,8 +193,10 @@ body {
 
 .page-logo {
   position: relative;
+  z-index: 1;
 
   width: 140px;
+
 }
 
 .logo {
@@ -202,6 +204,11 @@ body {
   top: 0;
   left: 0;
 
+}
+
+.navigation {
+  position: relative;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -309,30 +316,40 @@ body {
 .welcome-section {
   position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   min-height: 485px;
+  padding-top: 50px;
 
   color: #000000;
+  text-align: center;
 
   background-color: #ffffff;
   background-image: url("../images/index-mountains.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+.welcome-section::before,
+.welcome-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  height: 57px;
+
+  background-color: #fff;
+  clip-path: polygon(0% 100%, 0% 0%, 50% 100%, 100% 0%, 100% 100%);
 }
 
 .welcome-section::before {
-  content: "";
-  position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 600px solid #fff;
-  border-right: 600px solid #fff;
-  border-top: 57px solid transparent;
+}
+
+.welcome-section::after {
+  left: 250px;
+  right: 250px;
 }
 
 /* Advantages */
@@ -449,7 +466,7 @@ body {
   width: 400px;
   min-height: 385px;
   margin: 0;
-  padding: 81px 85px;
+  padding: 83px 85px 81px;
 
   font-size: 18px;
   line-height: 21px;
@@ -459,7 +476,7 @@ body {
 }
 
 .offers-item .h3 {
-  margin-top: 30px;
+  margin-top: 26px;
   margin-bottom: 30px;
 }
 
@@ -518,6 +535,7 @@ body {
   height: 52px;
   padding: 14px 20px;
 
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.6);
@@ -526,7 +544,6 @@ body {
   border-radius: 4px 0 0 4px;
   border: none;
   box-sizing: border-box;
-
 }
 
 .subscribe-button {
@@ -541,7 +558,7 @@ body {
   justify-content: space-between;
   align-items: center;
   column-gap: 40px;
-  padding: 40px 70px 30px;
+  padding: 45px 70px 35px;
 
 }
 
@@ -567,12 +584,12 @@ body {
 }
 
 .social-link:hover,
-.social-link:focus  {
+.social-link:focus {
   color: #68a2ca;
 }
 
-.social-link:active  {
-  background: rgba(104, 162, 202, 0.3);
+.social-link:active {
+  color: rgba(104, 162, 202, 0.3);
 }
 
 .social-icon {
@@ -591,23 +608,29 @@ body {
 }
 
 .phone:hover,
-.phone:focus  {
+.phone:focus {
   color: #756157;
 }
 
-.phone:active  {
+.phone:active {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.developer {
+  color: #000000;
+}
 .developer:hover,
-.developer:focus  {
-  background: #756157;
+.developer:focus {
+  color: #756157;
 }
 
-.developer:active  {
-  background: rgba(117, 97, 87, 0.3);
+.developer:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
+.developer-icon  {
+  fill: currentColor;
+}
 
 /* Pages */
 /* Catalog */
@@ -690,6 +713,8 @@ body {
   list-style-type: none;
 }
 
+
+
 .price {
   margin: 0;
   padding: 0 70px 0 0;
@@ -753,6 +778,15 @@ body {
 
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+}
+
+.view-link:hover,
+.view-link:active {
+  border: 2px solid #000000;
+}
+
+.view-link:focus {
+  border: 2px solid #68a2ca;
 }
 
 .view-link--active {
@@ -878,6 +912,15 @@ body {
   box-sizing: border-box;
 }
 
+.pagination-link:hover,
+.pagination-link:focus {
+  background-color: #68a2ca;
+}
+
+.pagination-link:active {
+  background: #82b3d3;
+}
+
 .pagination-more {
   display: block;
   width: 60px;
@@ -892,5 +935,11 @@ body {
 
 .pagination-current {
   color: #000000;
+  background: #f2f2f2;
+}
+
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active {
   background: #f2f2f2;
 }

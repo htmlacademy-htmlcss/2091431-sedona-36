@@ -13,7 +13,7 @@
       <header class="page-header">
         <!-- Логотип -->
         <a class="page-logo">
-          <img class="logo image" src="images/logo.png" alt="Логотип" width="140" height="70">
+          <img class="logo image" src="images/logo.svg" alt="Логотип" width="140" height="70">
         </a>
         <!-- //  Логотип -->
 
@@ -240,6 +240,80 @@
     </div>
     <!-- Модальное окно -->
 
+    <div class="modal-container modal-container--hide">
+      <div class="modal modal-search">
+        <button class="modal-close">
+          <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.4905 4.78288L16.1982 3.49057L10.4905 9.19826L4.78279 3.49057L3.49048 4.78288L9.19817 10.4906L3.49048 16.1983L4.78279 17.4906L10.4905 11.7829L16.1982 17.4906L17.4905 16.1983L11.7828 10.4906L17.4905 4.78288Z"
+              fill="black" />
+          </svg>
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title h2">Поиск гостиницы в Седоне</h2>
+
+          <form class="modal-form" action="https://echo.htmlacademy.ru/courses" method="post">
+            <div class="modal-form-group modal-form-group--wide">
+              <label class="modal-form-label" for="arrival-date">Дата Заезда:</label>
+              <input class="modal-form-field modal-form-field--date" type="text" name="arrival-date" id="arrival-date"
+                value="27 апреля 2020" placeholder="Укажите дату">
+              <p class="modal-form-message modal-form-message--error">Мы не можем отправить вас в прошлое</p>
+            </div>
+
+            <div class="modal-form-group modal-form-group--wide">
+              <label class="modal-form-label" for="departure-date">Дата Выезда:</label>
+              <input class="modal-form-field modal-form-field--date" type="text" name="departure-date"
+                id="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+              <p class="modal-form-message modal-form-message--valid">На эти даты есть свободные номера. Пока есть.</p>
+            </div>
+
+            <div class="modal-form-group number">
+              <label class="modal-form-label" for="adults">Взрослые:</label>
+              <div class="modal-form-counter">
+                <button class="modal-form-button modal-form-button--reduce" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="modal-form-field modal-form-field--quantity" type="number" name="adults" id="adults"
+                  min="1" value="2">
+                <button class="modal-form-button modal-form-button--increase" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="modal-form-group">
+              <label class="modal-form-label modal-form-label--indent" for="children">Дети:</label>
+              <div class="modal-form-info">
+                <button class="modal-form-info-button" type="button">
+                  <svg class="coment" width="26" height="26" viewBox="0 0 26 26" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z"
+                      fill="white" />
+                  </svg>
+                </button>
+                <p class="modal-form-info-tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6
+                  до 18 лет. Дети до 6 лет
+                  размещаются бесплатно.</p>
+              </div>
+              <div class="modal-form-counter">
+                <button class="modal-form-button modal-form-button--reduce" type="button">
+                  <span class="visually-hidden">Уменьшить</span>
+                </button>
+                <input class="modal-form-field modal-form-field--quantity" type="number" name="children" id="children"
+                  min="0" value="2">
+                <button class="modal-form-button modal-form-button--increase" type="button">
+                  <span class="visually-hidden">Увеличить</span>
+                </button>
+              </div>
+
+            </div>
+            <button class="model-form-submit button button--additional" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
     <!-- // Модальное окно -->
   </body>
 

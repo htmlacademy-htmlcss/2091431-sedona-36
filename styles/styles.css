@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  min-width: 1280px;
+  min-width: 1260px;
   margin: 0;
   height: 100%;
 
@@ -43,8 +43,8 @@ input[type="number"]::-webkit-inner-spin-button {
 input[type="number"],
 input[type="number"]:hover,
 input[type="number"]:focus {
-    appearance: none;
-    -moz-appearance: textfield;
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .h1 {
@@ -262,6 +262,20 @@ input[type="number"]:focus {
   text-decoration: none;
 }
 
+.navigation-link:not(.navigation-link--active):hover {
+  opacity: 0.6;
+}
+
+.navigation-link:not(.navigation-link--active):focus {
+  color: #82b3d3;
+}
+
+.navigation-link:not(.navigation-link--active):active {
+  color: #82b3d3;
+
+  opacity: 0.6;
+}
+
 .navigation-link--active {
   position: relative;
 }
@@ -305,10 +319,28 @@ input[type="number"]:focus {
   box-sizing: border-box;
 }
 
+.menu-link:not(.menu-link--button):hover {
+  opacity: 0.6;
+}
+
+.menu-link:not(.menu-link--button):focus {
+  color: #82b3d3;
+}
+
+.menu-link:not(.menu-link--button):active {
+  color: #82b3d3;
+
+  opacity: 0.6;
+}
+
 .menu-link--button {
   height: auto;
   margin-left: 20px;
   padding: 8px 34px;
+}
+
+.menu-link-icon {
+  fill: currentColor;
 }
 
 .favorites {
@@ -687,7 +719,7 @@ input[type="number"]:focus {
 
   background-color: #b49397;
   background-image: url("../images/catalog/filter.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 
   box-sizing: border-box;
@@ -815,6 +847,7 @@ input[type="number"]:focus {
   content: "";
   z-index: 1;
 
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin-right: 16px;
@@ -853,7 +886,7 @@ input[type="number"]:focus {
   background-image: url("../images/catalog/checkbox.svg");
 }
 
-.filter-input:checked + .filter-label--radio::after  {
+.filter-input:checked + .filter-label--radio::after {
   opacity: 1;
 }
 
@@ -1440,12 +1473,12 @@ input[type="number"]:focus {
 }
 
 .modal-form-button-icon {
-  fill:  #756157;
+  fill: #756157;
 }
 
 .modal-form-button:hover .modal-form-button-icon,
 .modal-form-button:focus .modal-form-button-icon,
-.modal-form-button:active .modal-form-button-icon  {
+.modal-form-button:active .modal-form-button-icon {
   fill: #000000;
 }
 
